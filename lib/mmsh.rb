@@ -8,7 +8,8 @@ module MMSH
     cmd_lines = []
 
     loop do
-      cmd = Readline.readline("#{prompt} ", true).rstrip
+      cmd = Readline.readline("#{prompt} ", false).rstrip
+      Readline::HISTORY.push(cmd) unless cmd.empty?
       cmd_lines << minimize(cmd)
 
       if cmd.end_with?('\\')
