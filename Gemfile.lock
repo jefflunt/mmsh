@@ -3,9 +3,9 @@ GEM
   specs:
 
 PLATFORMS
-  ruby
+  x86_64-darwin-22
 
 DEPENDENCIES
 
 BUNDLED WITH
-   1.17.1
+   2.4.1

@@ -1,7 +1,7 @@
 require 'readline'
 require 'securerandom'
 
-module MMSH
+module Mmsh
   Cmd = Struct.new(:id, :name, :args, :input, :output)
 
   def self.read(prompt)
