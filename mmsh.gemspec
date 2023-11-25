@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = %q{mmsh}
-  s.version = '1.0.0'
+  s.version = '1.0.1'
   s.license = 'MIT'
   s.authors = ['Jeff Lunt']
   s.email = 'jefflunt@gmail.com'

@@ -21,6 +21,32 @@ $ foo < bar | baz > fizz.txt
 * Run command `baz`, whose input came from the output of `foo`
 * Write the output of `baz` to `fizz.txt`
 
+### an IRB session
+
+```irb
+ > Mmsh.parse(Mmsh.read('>'))
+ > foo < bar.input | baz > fizz.output
+=>
+[#<struct Mmsh::Cmd
+  id="d2e22c61-8b93-4e24-bd7a-079b50430060",
+  name="foo",
+  args="",
+  input="bar.input",
+  output="d2e22c61-8b93-4e24-bd7a-079b50430060">,
+ #<struct Mmsh::Cmd
+  id="4140c384-eac8-4fad-9c4f-0bb8b1862a9d",
+  name="|",
+  args="",
+  input=nil,
+  output="4140c384-eac8-4fad-9c4f-0bb8b1862a9d">,
+ #<struct Mmsh::Cmd
+  id="5fe10da0-1b9a-4619-adcb-a231602daa27",
+  name="baz",
+  args="",
+  input="d2e22c61-8b93-4e24-bd7a-079b50430060",
+  output="fizz.output">]
+```
+
 ## Why build this?
 
 I've been working on a few fun side projects lately built around a basic shell,
